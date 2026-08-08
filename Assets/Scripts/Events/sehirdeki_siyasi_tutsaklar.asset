@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50dd5c5ea3230ca4b8b54de4498e13f5, type: 3}
+  m_Name: sehirdeki_siyasi_tutsaklar
+  m_EditorClassIdentifier: Assembly-CSharp::EventCard
+  story: "\u015Eehirdeki h\xFCcre evimizden haber var! \u0130ki g\xFCn sonra hapishaneden
+    birka\xE7 \xF6nemli siyasi tutukluyu ka\xE7\u0131racaklar. Onlar\u0131 bizim
+    kampa getirmek istiyorlar ama pe\u015Flerinde koca bir ordu olacak."
+  lButtonText: "Gelsinler, onlar\u0131 koruruz"
+  rButtonText: "\xC7ok riskli, s\u0131n\u0131r\u0131 ge\xE7sinler"
+  l_population: 15
+  l_supply: -20
+  l_motivation: 15
+  l_rebellion: -15
+  r_population: 0
+  r_supply: 5
+  r_motivation: -5
+  r_rebellion: 5

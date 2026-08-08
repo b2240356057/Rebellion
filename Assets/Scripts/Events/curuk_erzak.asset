@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50dd5c5ea3230ca4b8b54de4498e13f5, type: 3}
+  m_Name: curuk_erzak
+  m_EditorClassIdentifier: Assembly-CSharp::EventCard
+  story: "Depoya su s\u0131zd\u0131; erzak\u0131n bir k\u0131sm\u0131 bozuluyor."
+  lButtonText: Yedir
+  rButtonText: "\xC7\xF6pe at\n"
+  l_population: 0
+  r_population: 0
+  l_supply: 0
+  r_supply: -10
+  l_motivation: -10
+  r_motivation: 0
+  l_rebellion: 15
+  r_rebellion: -5

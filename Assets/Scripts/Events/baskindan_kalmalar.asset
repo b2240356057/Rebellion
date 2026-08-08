@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50dd5c5ea3230ca4b8b54de4498e13f5, type: 3}
+  m_Name: baskindan_kalmalar
+  m_EditorClassIdentifier: Assembly-CSharp::EventCard
+  story: "Ge\xE7en haftaki k\xF6y bask\u0131n\u0131ndan sa\u011F kurtulan bir grup
+    gen\xE7 ve \xE7ocuk kampa s\u0131\u011F\u0131nd\u0131. Sava\u015Facak ya\u015Fta
+    de\u011Filler ama \xE7ama\u015F\u0131r, temizlik, yemek i\u015Flerinde i\u015Fe
+    yararlar. Ne yapal\u0131m?"
+  lButtonText: Kampa kabul et
+  rButtonText: "\u015Eehre giden yola b\u0131rak\u0131n"
+  l_population: 5
+  l_supply: -10
+  l_motivation: 10
+  l_rebellion: -10
+  r_population: -5
+  r_supply: 5
+  r_motivation: -10
+  r_rebellion: 10

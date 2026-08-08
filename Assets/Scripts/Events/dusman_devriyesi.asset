@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50dd5c5ea3230ca4b8b54de4498e13f5, type: 3}
+  m_Name: dusman_devriyesi
+  m_EditorClassIdentifier: Assembly-CSharp::EventCard
+  story: "D\xFC\u015Fman devriyesi kamp\u0131n yak\u0131n\u0131nda; dikkatli olmak
+    gerekiyor."
+  lButtonText: "Pusu kur\n\t"
+  rButtonText: "G\xF6zlemle\n"
+  l_population: -5
+  r_population: 0
+  l_supply: 0
+  r_supply: 0
+  l_motivation: 10
+  r_motivation: -5
+  l_rebellion: -5
+  r_rebellion: 5

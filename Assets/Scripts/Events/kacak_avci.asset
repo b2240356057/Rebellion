@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50dd5c5ea3230ca4b8b54de4498e13f5, type: 3}
+  m_Name: kacak_avci
+  m_EditorClassIdentifier: Assembly-CSharp::EventCard
+  story: "Ka\xE7ak avc\u0131lar ele ge\xE7irildi; et var ama hukuki sonu\xE7lar\u0131
+    var"
+  lButtonText: El koy
+  rButtonText: "Serbest B\u0131rak"
+  l_population: 5
+  r_population: 0
+  l_supply: 20
+  r_supply: 0
+  l_motivation: 0
+  r_motivation: 15
+  l_rebellion: 15
+  r_rebellion: 0

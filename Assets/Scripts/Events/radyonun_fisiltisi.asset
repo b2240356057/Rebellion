@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50dd5c5ea3230ca4b8b54de4498e13f5, type: 3}
+  m_Name: radyonun_fisiltisi
+  m_EditorClassIdentifier: Assembly-CSharp::EventCard
+  story: "Son yapt\u0131\u011F\u0131m\u0131z radyo yay\u0131n\u0131ndan sonra kom\u015Fu
+    vadiden bir grup k\xF6yl\xFC tas\u0131 tara\u011F\u0131 toplay\u0131p gelmi\u015F.
+    'Davan\u0131za inand\u0131k' diyorlar ama yanlar\u0131nda sadece birka\xE7 \xE7uval
+    un ve patates var."
+  lButtonText: "Kap\u0131lar\u0131m\u0131z herkese a\xE7\u0131k"
+  rButtonText: "Sadece silah tutabilenler kals\u0131n"
+  l_population: 10
+  l_supply: 5
+  l_motivation: 5
+  l_rebellion: 15
+  r_population: 5
+  r_supply: 0
+  r_motivation: -5
+  r_rebellion: 10

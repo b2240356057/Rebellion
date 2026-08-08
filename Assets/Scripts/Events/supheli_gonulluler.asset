@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50dd5c5ea3230ca4b8b54de4498e13f5, type: 3}
+  m_Name: supheli_gonulluler
+  m_EditorClassIdentifier: Assembly-CSharp::EventCard
+  story: "On ki\u015Filik gen\xE7 bir grup kat\u0131lmak istiyor; aralar\u0131nda
+    casus olabilir."
+  lButtonText: AL
+  rButtonText: "Geri \xE7evir"
+  l_population: 10
+  r_population: 0
+  l_supply: 0
+  r_supply: 0
+  l_motivation: 10
+  r_motivation: -15
+  l_rebellion: 10
+  r_rebellion: 0
