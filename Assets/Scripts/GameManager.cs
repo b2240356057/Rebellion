@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance { get; private set;}
 
     public List<EventCard> eventList = new List<EventCard>();
-    private List<EventCard> pastEventList = new List<EventCard>();
+    private List<EventCard> pastEventList = new List<EventCard>(); 
     void Start()
     {
         Instance = this;
