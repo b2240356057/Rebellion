@@ -140,4 +140,9 @@ public class GameManager : MonoBehaviour
         currentState = GameState.working;
     }
 
+    public EventCard getCurrentCard()
+    {
+        return currentEvent;
+    }
+
 }

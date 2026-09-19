@@ -99,6 +99,24 @@ public class ResourceManager : MonoBehaviour
         SetStats(50, 50, 50, 0);
     }
 
+    public int getPopulation()
+    {
+        return population;
+    }
 
+    public int getSupply()
+    {
+        return supply;
+    }
+
+    public int getMotivation()
+    {
+        return motivation;
+    }
+
+    public float getRebellion()
+    {
+        return rebellion;
+    }
 
 }
