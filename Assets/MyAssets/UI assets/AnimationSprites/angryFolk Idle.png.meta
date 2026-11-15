@@ -1,0 +1,446 @@
+fileFormatVersion: 2
+guid: 957b8d1a0657c6144a34615a64437652
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5787885785218434753
+    second: angryFolk_idle-removebg-preview_0
+  - first:
+      213: -4099798699675728077
+    second: angryFolk_idle-removebg-preview_1
+  - first:
+      213: 5575022678644233787
+    second: angryFolk_idle-removebg-preview_2
+  - first:
+      213: -5753877184431526030
+    second: angryFolk_idle-removebg-preview_3
+  - first:
+      213: -3428932427840195557
+    second: angryFolk_idle-removebg-preview_4
+  - first:
+      213: -9062701121823097143
+    second: angryFolk_idle-removebg-preview_5
+  - first:
+      213: 5477672236963809219
+    second: angryFolk_idle-removebg-preview_6
+  - first:
+      213: 5543168308268404718
+    second: angryFolk_idle-removebg-preview_7
+  - first:
+      213: 6640519397572748675
+    second: angryFolk_idle-removebg-preview_8
+  - first:
+      213: -6782704392916716797
+    second: angryFolk_idle-removebg-preview_9
+  - first:
+      213: 1681885200116790372
+    second: angryFolk_idle-removebg-preview_10
+  - first:
+      213: -3495281389018593544
+    second: angryFolk_idle-removebg-preview_11
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: angryFolk_idle-removebg-preview_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 187
+        width: 111
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c64a74c473b25050800000000000000
+      internalID: 5787885785218434753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: angryFolk_idle-removebg-preview_1
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 187
+        width: 111
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3374837edc69a17c0800000000000000
+      internalID: -4099798699675728077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: angryFolk_idle-removebg-preview_2
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 187
+        width: 111
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b361657a6957e5d40800000000000000
+      internalID: 5575022678644233787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: angryFolk_idle-removebg-preview_3
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 187
+        width: 111
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27febb4af2f1620b0800000000000000
+      internalID: -5753877184431526030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: angryFolk_idle-removebg-preview_4
+      rect:
+        serializedVersion: 2
+        x: 444
+        y: 187
+        width: 111
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1474c7cf1cf960d0800000000000000
+      internalID: -3428932427840195557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: angryFolk_idle-removebg-preview_5
+      rect:
+        serializedVersion: 2
+        x: 555
+        y: 187
+        width: 111
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ce33309851da3280800000000000000
+      internalID: -9062701121823097143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: angryFolk_idle-removebg-preview_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1
+        width: 111
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c74f38a0e9940c40800000000000000
+      internalID: 5477672236963809219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: angryFolk_idle-removebg-preview_7
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 1
+        width: 111
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eef8a88153a4dec40800000000000000
+      internalID: 5543168308268404718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: angryFolk_idle-removebg-preview_8
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 1
+        width: 111
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3852a68853dd72c50800000000000000
+      internalID: 6640519397572748675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: angryFolk_idle-removebg-preview_9
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 1
+        width: 111
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 303b7bb7a4efed1a0800000000000000
+      internalID: -6782704392916716797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: angryFolk_idle-removebg-preview_10
+      rect:
+        serializedVersion: 2
+        x: 444
+        y: 1
+        width: 111
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 464b2f1bda1475710800000000000000
+      internalID: 1681885200116790372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: angryFolk_idle-removebg-preview_11
+      rect:
+        serializedVersion: 2
+        x: 555
+        y: 1
+        width: 111
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f6438178144e7fc0800000000000000
+      internalID: -3495281389018593544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 7920340898d3aa04a9515b3dee7651eb
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":6.0,"y":2.0},"gridSpriteSize":{"x":111.0,"y":186.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      angryFolk_idle-removebg-preview_0: 5787885785218434753
+      angryFolk_idle-removebg-preview_1: -4099798699675728077
+      angryFolk_idle-removebg-preview_10: 1681885200116790372
+      angryFolk_idle-removebg-preview_11: -3495281389018593544
+      angryFolk_idle-removebg-preview_2: 5575022678644233787
+      angryFolk_idle-removebg-preview_3: -5753877184431526030
+      angryFolk_idle-removebg-preview_4: -3428932427840195557
+      angryFolk_idle-removebg-preview_5: -9062701121823097143
+      angryFolk_idle-removebg-preview_6: 5477672236963809219
+      angryFolk_idle-removebg-preview_7: 5543168308268404718
+      angryFolk_idle-removebg-preview_8: 6640519397572748675
+      angryFolk_idle-removebg-preview_9: -6782704392916716797
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

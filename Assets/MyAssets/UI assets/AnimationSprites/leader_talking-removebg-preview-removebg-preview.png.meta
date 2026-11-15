@@ -1,0 +1,391 @@
+fileFormatVersion: 2
+guid: 74a65283e4190c04cbf30a8f0c4aaaa2
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3308751242368050409
+    second: leader_talking-removebg-preview-removebg-preview_0
+  - first:
+      213: 334484465027699062
+    second: leader_talking-removebg-preview-removebg-preview_1
+  - first:
+      213: 3003040965262964238
+    second: leader_talking-removebg-preview-removebg-preview_2
+  - first:
+      213: 5007724408086845520
+    second: leader_talking-removebg-preview-removebg-preview_3
+  - first:
+      213: -1659719099928021780
+    second: leader_talking-removebg-preview-removebg-preview_4
+  - first:
+      213: 1248584786684635318
+    second: leader_talking-removebg-preview-removebg-preview_5
+  - first:
+      213: -1605324178681503667
+    second: leader_talking-removebg-preview-removebg-preview_6
+  - first:
+      213: -2229514890815253343
+    second: leader_talking-removebg-preview-removebg-preview_7
+  - first:
+      213: 3651697530019898367
+    second: leader_talking-removebg-preview-removebg-preview_8
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 14.8
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: leader_talking-removebg-preview-removebg-preview_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 187
+        width: 145
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e4ea7379bb0bed20800000000000000
+      internalID: 3308751242368050409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leader_talking-removebg-preview-removebg-preview_1
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 187
+        width: 136
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f27c5480f888f94f83f998cbd71d3a0
+      internalID: 334484465027699062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leader_talking-removebg-preview-removebg-preview_2
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 187
+        width: 118
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14f39ebcc3792f4499d8e9c29676eb7c
+      internalID: 3003040965262964238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leader_talking-removebg-preview-removebg-preview_3
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 187
+        width: 125
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d575c65bd7c422647b7fcdba89e6ce3a
+      internalID: 5007724408086845520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leader_talking-removebg-preview-removebg-preview_4
+      rect:
+        serializedVersion: 2
+        x: 526
+        y: 187
+        width: 139
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74d19c6aab9969746b88205b7305c64c
+      internalID: -1659719099928021780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leader_talking-removebg-preview-removebg-preview_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1
+        width: 146
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 600894bbb3397af4295bf220ac6d08f4
+      internalID: 1248584786684635318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leader_talking-removebg-preview-removebg-preview_6
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 1
+        width: 134
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc0b7361738bccd41bd5eaf5835aab2b
+      internalID: -1605324178681503667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leader_talking-removebg-preview-removebg-preview_7
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 1
+        width: 118
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7fbc1dc1a865dc49ba65315e4e0e978
+      internalID: -2229514890815253343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leader_talking-removebg-preview-removebg-preview_8
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 1
+        width: 123
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d95aebf14acec3438623525bff33a33
+      internalID: 3651697530019898367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leader_talking-removebg-preview-removebg-preview_9
+      rect:
+        serializedVersion: 2
+        x: 523
+        y: 1
+        width: 142
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a07813610855a034b932e166480e3438
+      internalID: 2067074514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: c6b10aa47db02174ab9f41790f0a758a
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":5.0,"y":2.0},"gridSpriteSize":{"x":133.0,"y":186.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      leader_talking-removebg-preview-removebg-preview_0: 3308751242368050409
+      leader_talking-removebg-preview-removebg-preview_1: 334484465027699062
+      leader_talking-removebg-preview-removebg-preview_2: 3003040965262964238
+      leader_talking-removebg-preview-removebg-preview_3: 5007724408086845520
+      leader_talking-removebg-preview-removebg-preview_4: -1659719099928021780
+      leader_talking-removebg-preview-removebg-preview_5: 1248584786684635318
+      leader_talking-removebg-preview-removebg-preview_6: -1605324178681503667
+      leader_talking-removebg-preview-removebg-preview_7: -2229514890815253343
+      leader_talking-removebg-preview-removebg-preview_8: 3651697530019898367
+      leader_talking-removebg-preview-removebg-preview_9: 2067074514
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
