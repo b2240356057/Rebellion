@@ -4,7 +4,16 @@ using System;
 public class ResourceManager : MonoBehaviour
 {
     public static event Action<int, int, int, float> OnResourceChanged;
+    public static event Action<GameResult> OnGameResult;
     public static ResourceManager Instance { get; private set; }
+
+    public enum GameResult
+    {
+        None,
+        Won,
+        Lost
+    }
+
     [Header("Stats")]
     int motivation=50;
     int supply=50;
@@ -16,6 +25,18 @@ public class ResourceManager : MonoBehaviour
         Instance = this;
     }
 
+    private void OnEnable()
+    {
+        GameManager.OnStatsChangeRequested += ChangeStats;
+        GameManager.OnStatsResetRequested += StatReset;
+    }
+
+    private void OnDisable()
+    {
+        GameManager.OnStatsChangeRequested -= ChangeStats;
+        GameManager.OnStatsResetRequested -= StatReset;
+    }
+
     
 
     public void ChangeStats(int _population,int _supply,int _motivation,float _rebellion)
@@ -25,45 +46,24 @@ public class ResourceManager : MonoBehaviour
         motivation += _motivation;
         rebellion += _rebellion;
 
-        if (isWin())
-        {
-            GameManager.Instance.WinState();
-            
-        }
-        else if(isLose())
-        {
-            GameManager.Instance.LoseState();
-            
-        }
+        population = Mathf.Clamp(population, 0, 100);
+        supply = Mathf.Clamp(supply, 0, 100);
+        motivation = Mathf.Clamp(motivation, 0, 100);
+        rebellion = Mathf.Clamp(rebellion, 0f, 100f);
 
-        if (OnResourceChanged != null)
-        {
-            OnResourceChanged.Invoke(population, supply, motivation, rebellion);
-        }
+        OnResourceChanged?.Invoke(population, supply, motivation, rebellion);
+        OnGameResult?.Invoke(isLose() ? GameResult.Lost : isWin() ? GameResult.Won : GameResult.None);
     }
 
     public void SetStats(int _population, int _supply, int _motivation, float _rebellion)
     {
-        population = _population;
-        supply = _supply;
-        motivation = _motivation;
-        rebellion = _rebellion;
+        population = Mathf.Clamp(_population, 0, 100);
+        supply = Mathf.Clamp(_supply, 0, 100);
+        motivation = Mathf.Clamp(_motivation, 0, 100);
+        rebellion = Mathf.Clamp(_rebellion, 0f, 100f);
 
-        if (isWin())
-        {
-            GameManager.Instance.WinState();
-
-        }
-        else if (isLose())
-        {
-            GameManager.Instance.LoseState();
-
-        }
-
-        if (OnResourceChanged != null)
-        {
-            OnResourceChanged.Invoke(population, supply, motivation, rebellion);
-        }
+        OnResourceChanged?.Invoke(population, supply, motivation, rebellion);
+        OnGameResult?.Invoke(isLose() ? GameResult.Lost : isWin() ? GameResult.Won : GameResult.None);
     }
 
 

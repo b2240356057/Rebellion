@@ -23,11 +23,18 @@ public class UIManager : MonoBehaviour
     public static event Action UIManagerEvent;
 
     private float delay=0.05f;
+    private int currentPopulation;
+    private int currentSupply;
+    private int currentMotivation;
+    private float currentRebellion;
+    private EventCard currentEvent;
+    private Coroutine cardCoroutine;
+    private Coroutine resultCoroutine;
 
     private void Awake()
     {
-        UIManagerEvent?.Invoke();
         Instance = this;
+        UIManagerEvent?.Invoke();
     }
 
     void Start()
@@ -52,8 +59,11 @@ public class UIManager : MonoBehaviour
     [SerializeField] private GameObject right_button;
 
     [SerializeField] private TextMeshProUGUI population_label;
+    [SerializeField] private TextMeshProUGUI population_preview_label;
     [SerializeField] private TextMeshProUGUI supply_label;
+    [SerializeField] private TextMeshProUGUI supply_preview_label;
     [SerializeField] private TextMeshProUGUI motivation_label;
+    [SerializeField] private TextMeshProUGUI motivation_preview_label;
     [SerializeField] private Slider rebellion_bar;
 
     [SerializeField] private Slider preview_rebellion_bar;
@@ -72,21 +82,82 @@ public class UIManager : MonoBehaviour
     public void OnEnable()
     {
         ResourceManager.OnResourceChanged += UpdateUIStats;
+        GameManager.OnCardChanged += SetCardFromEvent;
+        GameManager.OnGameReset += UIReset;
+        ResourceManager.OnGameResult += HandleGameResult;
     }
 
     public void OnDisable()
     {
         ResourceManager.OnResourceChanged -= UpdateUIStats;
-        
+        GameManager.OnCardChanged -= SetCardFromEvent;
+        GameManager.OnGameReset -= UIReset;
+        ResourceManager.OnGameResult -= HandleGameResult;
     }
 
 
     public void UpdateUIStats(int population,int supply,int motivation,float rebellion)
     {
+        currentPopulation = population;
+        currentSupply = supply;
+        currentMotivation = motivation;
+        currentRebellion = rebellion;
         population_label.text = "Nüfus: " + population.ToString();
         motivation_label.text = "Moral: " + motivation.ToString();
         supply_label.text = "Erzak: " + supply.ToString();
         rebellion_bar.value = rebellion;
+        if (population_preview_label != null) population_preview_label.text = "";
+        if (supply_preview_label != null) supply_preview_label.text = "";
+        if (motivation_preview_label != null) motivation_preview_label.text = "";
+    }
+
+    private void SetCardFromEvent(EventCard card)
+    {
+        currentEvent = card;
+        if (cardCoroutine != null)
+        {
+            StopCoroutine(cardCoroutine);
+        }
+        if (resultCoroutine != null)
+        {
+            StopCoroutine(resultCoroutine);
+            resultCoroutine = null;
+        }
+        HidePreviewStats();
+        disableButtons();
+        cardCoroutine = StartCoroutine(SetCard(card));
+    }
+
+    private void HandleGameResult(ResourceManager.GameResult result)
+    {
+        if (result == ResourceManager.GameResult.Won)
+        {
+            if (cardCoroutine != null)
+            {
+                StopCoroutine(cardCoroutine);
+                cardCoroutine = null;
+            }
+            if (resultCoroutine != null)
+            {
+                StopCoroutine(resultCoroutine);
+            }
+            resultCoroutine = StartCoroutine(WinMessage());
+            SetResButton(true);
+        }
+        else if (result == ResourceManager.GameResult.Lost)
+        {
+            if (cardCoroutine != null)
+            {
+                StopCoroutine(cardCoroutine);
+                cardCoroutine = null;
+            }
+            if (resultCoroutine != null)
+            {
+                StopCoroutine(resultCoroutine);
+            }
+            resultCoroutine = StartCoroutine(LoseMessage());
+            SetResButton(true);
+        }
     }
 
 
@@ -180,6 +251,7 @@ public class UIManager : MonoBehaviour
         lButtonText.text = currentEvent.lButtonText;
         rButtonText.text = currentEvent.rButtonText;
         activateButtons();
+        cardCoroutine = null;
     }
 
     public bool isObjectHere(GameObject obj, Vector3 targetPosition, float threshold)
@@ -278,6 +350,7 @@ public class UIManager : MonoBehaviour
             chatBubble.text += C;
             yield return new WaitForSeconds(0.05f);
         }
+        resultCoroutine = null;
     }
 
 
@@ -292,6 +365,7 @@ public class UIManager : MonoBehaviour
             chatBubble.text += C;
             yield return new WaitForSeconds(0.05f);
         }
+        resultCoroutine = null;
     }
 
 
@@ -310,28 +384,37 @@ public class UIManager : MonoBehaviour
     
     public void UIReset()
     {
-        
-        StartCoroutine(SetCard(emptyEvent));
-        
+        if (cardCoroutine != null)
+        {
+            StopCoroutine(cardCoroutine);
+            cardCoroutine = null;
+        }
+        if (resultCoroutine != null)
+        {
+            StopCoroutine(resultCoroutine);
+            resultCoroutine = null;
+        }
+        chatBubble.text = "";
+        disableButtons();
+        HidePreviewStats();
+        ResetCharacterPositions();
+        tenet.StopTalking();
+        angryFolk.StopTalking();
+        sadFolk.StopTalking();
+        SetResButton(false);
     }
 
 
     public void OnHoverL()
     {
-        EventCard activeCard = GameManager.Instance.getCurrentCard();
-
-        if (activeCard == null) return;
-
-        ShowPreviewStats(activeCard.l_population, activeCard.l_supply, activeCard.l_motivation, activeCard.l_rebellion);
+        if (currentEvent == null) return;
+        ShowPreviewStats(currentEvent.l_population, currentEvent.l_supply, currentEvent.l_motivation, currentEvent.l_rebellion);
     }
 
     public void OnHoverR()
     {
-        EventCard activeCard = GameManager.Instance.getCurrentCard();
-
-        if (activeCard == null) return;
-
-        ShowPreviewStats(activeCard.r_population, activeCard.r_supply, activeCard.r_motivation, activeCard.r_rebellion);
+        if (currentEvent == null) return;
+        ShowPreviewStats(currentEvent.r_population, currentEvent.r_supply, currentEvent.r_motivation, currentEvent.r_rebellion);
     }
 
 
@@ -339,17 +422,13 @@ public class UIManager : MonoBehaviour
 
     public void ShowPreviewStats(int prePopulation,int preSupply,int preMotivation,int preRebellion)
     {
+        population_label.text = "Nüfus: " + currentPopulation.ToString();
+        supply_label.text = "Erzak: " + currentSupply.ToString();
+        motivation_label.text = "Moral: " + currentMotivation.ToString();
 
-        // Önce mevcut değerleri çekiyoruz
-        int currentPopulation = ResourceManager.Instance.getPopulation();
-        int currentSupply = ResourceManager.Instance.getSupply();
-        int currentMotivation = ResourceManager.Instance.getMotivation();
-        float currentRebellion = ResourceManager.Instance.getRebellion();
-
-        // Label'ları tek satırda yardımcı metot ile güncelliyoruz
-        population_label.text = "Nüfus: " + FormatStat(currentPopulation, prePopulation);
-        supply_label.text = "Erzak: " + FormatStat(currentSupply, preSupply);
-        motivation_label.text = "Moral: " + FormatStat(currentMotivation, preMotivation);
+        SetPreviewStat(population_preview_label, currentPopulation, prePopulation);
+        SetPreviewStat(supply_preview_label, currentSupply, preSupply);
+        SetPreviewStat(motivation_preview_label, currentMotivation, preMotivation);
 
         //Rebellion part is a little bit more complicated
         if (preRebellion > 0)
@@ -376,34 +455,33 @@ public class UIManager : MonoBehaviour
 
 
     }
-    // Rengi ve işareti ayarlayan yardımcı metot
-    private string FormatStat(int currentValue, int preValue)
+    private void SetPreviewStat(TextMeshProUGUI previewLabel, int currentValue, int change)
     {
-        if (preValue > 0)
+        if (previewLabel == null)
         {
-            return  " <color=green>+"+ (currentValue + preValue).ToString() + "</color>";
+            return;
         }
-        else if (preValue < 0)
-        {
-            return " <color=red>-" + (currentValue + preValue).ToString() + "</color>";
-        }
-        else
-        {
-            // Değişim 0 ise sadece mevcut değeri döndür
-            return currentValue.ToString();
-        }
+
+        previewLabel.text = change > 0
+            ? "<color=green>+" + change.ToString() + "</color>"
+            : change < 0
+                ? "<color=red>" + change.ToString() + "</color>"
+                : "";
+    }
+
+    private void ClearPreviewStats()
+    {
+        if (population_preview_label != null) population_preview_label.text = "";
+        if (supply_preview_label != null) supply_preview_label.text = "";
+        if (motivation_preview_label != null) motivation_preview_label.text = "";
     }
 
     public void HidePreviewStats()
     {
-        int currentPopulation = ResourceManager.Instance.getPopulation();
-        int currentSupply = ResourceManager.Instance.getSupply();
-        int currentMotivation = ResourceManager.Instance.getMotivation();
-        float currentRebellion = ResourceManager.Instance.getRebellion();
-
         population_label.text = "Nüfus: " + currentPopulation.ToString();
         motivation_label.text = "Moral: " + currentMotivation.ToString();
         supply_label.text = "Erzak: " + currentSupply.ToString();
+        ClearPreviewStats();
         //Rebellion part    
         rebellion_bar.value = currentRebellion;
         preview_rebellion_bar.value = currentRebellion;

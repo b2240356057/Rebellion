@@ -9,6 +9,10 @@ public class GameManager : MonoBehaviour
 {
     public GameState currentState;
     public static GameManager Instance { get; private set;}
+    public static event Action<EventCard> OnCardChanged;
+    public static event Action OnGameReset;
+    public static event Action<int, int, int, float> OnStatsChangeRequested;
+    public static event Action OnStatsResetRequested;
 
     public List<EventCard> eventList = new List<EventCard>();
     private List<EventCard> pastEventList = new List<EventCard>(); 
@@ -21,35 +25,67 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        
         Instance = this;
-        SkipNextEvent();
-        
+        StartTheGame();
+    }
+
+    private void OnEnable()
+    {
+        ResourceManager.OnGameResult += HandleGameResult;
+    }
+
+    private void OnDisable()
+    {
+        ResourceManager.OnGameResult -= HandleGameResult;
     }
 
     
 
     EventCard currentEvent;
-    
     public void DrawRandomCard()
     {
-        
-        int randomIndex = UnityEngine.Random.Range(0, eventList.Count);
-        currentEvent = eventList[randomIndex];
-        if (pastEventList.Contains(currentEvent))
+        if (eventList == null || eventList.Count == 0)
         {
-            DrawRandomCard();
             return;
         }
-        pastEventList.Add(currentEvent);
 
-        if (eventList.Count == pastEventList.Count)
+        int startIndex = UnityEngine.Random.Range(0, eventList.Count);
+        EventCard selectedCard = null;
+
+        for (int offset = 0; offset < eventList.Count; offset++)
+        {
+            int candidateIndex = (startIndex + offset) % eventList.Count;
+            EventCard candidate = eventList[candidateIndex];
+
+            if (candidate != null && !pastEventList.Contains(candidate))
+            {
+                selectedCard = candidate;
+                break;
+            }
+        }
+
+        if (selectedCard == null)
         {
             pastEventList.Clear();
+            for (int i = 0; i < eventList.Count; i++)
+            {
+                int candidateIndex = (startIndex + i) % eventList.Count;
+                if (eventList[candidateIndex] != null)
+                {
+                    selectedCard = eventList[candidateIndex];
+                    break;
+                }
+            }
         }
-        UIManager.Instance.activateButtons();
-        UIManager.Instance.StopAllCoroutines();
-        StartCoroutine(UIManager.Instance.SetCard(currentEvent));
+
+        if (selectedCard == null)
+        {
+            return;
+        }
+
+        currentEvent = selectedCard;
+        pastEventList.Add(currentEvent);
+        OnCardChanged?.Invoke(currentEvent);
         Debug.Log("Current Event Emotion: " + currentEvent.emotion.ToString() + "Current Event messageSource: " + currentEvent.messenger.ToString());
         
         
@@ -75,34 +111,32 @@ public class GameManager : MonoBehaviour
     
     public void OnLeftButtonAction()
     {
+        if (currentState == GameState.ended || currentEvent == null)
+        {
+            return;
+        }
 
-        
-        
-
-        ResourceManager.Instance.ChangeStats(currentEvent.l_population, currentEvent.l_supply, currentEvent.l_motivation, currentEvent.l_rebellion);
+        OnStatsChangeRequested?.Invoke(currentEvent.l_population, currentEvent.l_supply, currentEvent.l_motivation, currentEvent.l_rebellion);
         if (currentState != GameState.ended)
         {
             SkipNextEvent();
         }
-
-        UIManager.Instance.disableButtons();
-        
 
     }
 
     public void OnRightButtonAction()
     {
+        if (currentState == GameState.ended || currentEvent == null)
+        {
+            return;
+        }
 
-        
-
-        ResourceManager.Instance.ChangeStats(currentEvent.r_population, currentEvent.r_supply, currentEvent.r_motivation, currentEvent.r_rebellion);
+        OnStatsChangeRequested?.Invoke(currentEvent.r_population, currentEvent.r_supply, currentEvent.r_motivation, currentEvent.r_rebellion);
         if (currentState != GameState.ended)
         {
             SkipNextEvent();
         }
 
-        UIManager.Instance.disableButtons();
-       
     }
     
    
@@ -110,29 +144,35 @@ public class GameManager : MonoBehaviour
     public void WinState()
     {
         currentState = GameState.ended;
-        StopAllCoroutines();
-        StartCoroutine(UIManager.Instance.WinMessage());
-        UIManager.Instance.SetResButton(true);
     }
 
     public void LoseState()
     {
         currentState = GameState.ended;
-        StopAllCoroutines();
-        StartCoroutine(UIManager.Instance.LoseMessage());
-        UIManager.Instance.SetResButton(true);
+    }
+
+    private void HandleGameResult(ResourceManager.GameResult result)
+    {
+        if (result == ResourceManager.GameResult.Won)
+        {
+            WinState();
+        }
+        else if (result == ResourceManager.GameResult.Lost)
+        {
+            LoseState();
+        }
     }
 
     public void Update()
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
-            ResourceManager.Instance.ChangeStats(5, 0, 0, 0);
+            OnStatsChangeRequested?.Invoke(5, 0, 0, 0);
         }
 
         if (Input.GetKeyDown(KeyCode.Q))
         {
-            ResourceManager.Instance.ChangeStats(-5, 0, 0, 0);
+            OnStatsChangeRequested?.Invoke(-5, 0, 0, 0);
         }
     }
 
@@ -140,16 +180,16 @@ public class GameManager : MonoBehaviour
     public void StartTheGame()
     {
         GameReset();
-        UIManager.Instance.SetResButton(false);
+        pastEventList.Clear();
         SkipNextEvent();
     }
 
 
     public void GameReset()
     {
-        ResourceManager.Instance.StatReset();
-        UIManager.Instance.UIReset();
+        OnStatsResetRequested?.Invoke();
         currentState = GameState.working;
+        OnGameReset?.Invoke();
     }
 
     public EventCard getCurrentCard()

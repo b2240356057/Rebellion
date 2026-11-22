@@ -14,22 +14,34 @@ public class CharacterAnimController : MonoBehaviour
     // Oyun içindeki kart veya diyalog olayları tetiklendiğinde bu metodu çağır
     public void StartTalking()
     {
-        animator.SetBool("isTalking", true);
+        if (animator != null)
+        {
+            animator.SetBool("isTalking", true);
+        }
     }
 
     // Liderin cümlesi/etkileşimi bittiğinde bu metodu çağır
     public void StopTalking()
     {
-        animator.SetBool("isTalking", false);
+        if (animator != null)
+        {
+            animator.SetBool("isTalking", false);
+        }
     }
 
     public void StartWalking()
     {
-        animator.SetBool("isWalking", true);
+        if (animator != null)
+        {
+            animator.SetBool("isWalking", true);
+        }
     }
 
     public void StopWalking()
     {
-        animator.SetBool("isWalking", false);
+        if (animator != null)
+        {
+            animator.SetBool("isWalking", false);
+        }
     }
 }
